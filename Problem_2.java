@@ -1,4 +1,4 @@
-public class Problem_2
+public class Problem_2 // Even Fibonacci numbers
 {
     public static void main(String[] args)
     {
