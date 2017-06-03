@@ -30,9 +30,9 @@ public class Problem_11 //Largest product in a grid
     int product = 0;
     
     
-    for(int i = 0; i < 20; i ++) //Row
+    for(int i = 0; i < array.length; i ++) //Row
     {
-      for(int r = 0; r < 17; r++)
+      for(int r = 0; r < array[i].length-3; r++)
         {
           temp = array[i][r] * array[i][r + 1] * array[i][r+ 2] * array[i][r + 3];
 
@@ -44,10 +44,10 @@ public class Problem_11 //Largest product in a grid
     }
     
     
-    for(int i = 0; i < 17; i ++)
+    for(int i = 0; i < array.length-3; i ++)
     {
       
-      for(int c = 0; c < 20; c++) //Column
+      for(int c = 0; c < array.length; c++) //Column
       {
         temp = array[i][c] * array[i + 1][c] * array[i + 2][c] * array[i + 3][c];
         
@@ -58,7 +58,7 @@ public class Problem_11 //Largest product in a grid
         
       }
     
-      for(int dr = 0; dr < 17; dr++) //diagonally right
+      for(int dr = 0; dr < array[i].length-3; dr++) //diagonally right
       {
         temp = array[i][dr] * array[i + 1][dr + 1] * array[i + 2][dr + 2] * array[i][dr + 3];
 
@@ -68,7 +68,7 @@ public class Problem_11 //Largest product in a grid
           }
       }
     
-      for(int dl = 3; dl < 20 ; dl++) //diagonally left
+      for(int dl = 3; dl < array.length ; dl++) //diagonally left
       {
         temp = array[i][dl] * array[i + 1][dl - 1] * array[i + 2][dl - 2] * array[i + 3][dl - 3];
 
